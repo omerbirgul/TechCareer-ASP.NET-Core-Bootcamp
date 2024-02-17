@@ -81,5 +81,33 @@ namespace efCore.Controllers
             }
             return View(model);
         }
+
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            var ogr = await _context.Ogrenciler.FindAsync(id);
+            if(id == null)
+            {
+                return NotFound();
+            }
+            if(ogr == null)
+            {
+                return NotFound();
+            }
+            return View(ogr);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete([FromForm]int id)
+        {
+            var ogr = await _context.Ogrenciler.FindAsync(id);
+            if(ogr == null)
+            {
+                return NotFound();
+            }
+            _context.Remove(ogr);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
     }
 }
