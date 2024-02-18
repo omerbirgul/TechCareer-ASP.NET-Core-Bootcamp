@@ -1,7 +1,20 @@
 @model Ogrenci
 <h2>Öğrenci Güncelle</h2>
-<form asp-asp-controller="Ogrenci" asp-action="Edit" method="post">
-    <input type="hidden" asp-for="OgrenciId">
-    @await Html.PartialAsync("_ogrenciSayfasi")
-</form>
-
+<div class="row">
+    <div class="col-8">
+        <form asp-asp-controller="Ogrenci" asp-action="Edit" method="post">
+            <input type="hidden" asp-for="OgrenciId">
+            @await Html.PartialAsync("_ogrenciSayfasi")
+        </form>
+    </div>
+    <div class="col-4">
+        <h4>Kayıtlı Olduğu Kurslar</h4>
+        <hr>
+        <ul>
+            @foreach(var item in @Model.KursKayitlari)
+            {
+                <li>@item.Kurs.Baslik </li>
+            }
+        </ul>
+    </div>
+</div>

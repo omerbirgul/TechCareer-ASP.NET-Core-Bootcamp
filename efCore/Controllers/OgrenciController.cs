@@ -37,7 +37,10 @@ namespace efCore.Controllers
 
         public async Task<IActionResult> Edit(int? id)
         {
-            var ogr = await _context.Ogrenciler.FirstOrDefaultAsync(o => o.OgrenciId == id);
+            var ogr = await _context
+            .Ogrenciler
+            .Include(x => x.KursKayitlari)
+            .ThenInclude(x => x.Kurs).FirstOrDefaultAsync(o => o.OgrenciId == id);
             if (id != null && ogr != null)
             {
                 return View(ogr);
