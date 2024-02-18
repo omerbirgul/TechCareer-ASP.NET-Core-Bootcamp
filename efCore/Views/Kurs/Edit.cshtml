@@ -1,0 +1,9 @@
+@model Kurs
+
+<h2>Kurs Güncelleme</h2>
+<hr>
+
+<form asp-controller="Kurs" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="KursId">
+    @await Html.PartialAsync("_kursSayfasi")
+</form>
