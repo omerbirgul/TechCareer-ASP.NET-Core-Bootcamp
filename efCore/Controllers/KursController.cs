@@ -40,7 +40,10 @@ namespace efCore.Controllers
 
         public async Task<IActionResult> Edit(int? id)
         {
-            var kurs = await _context.Kurslar.FirstOrDefaultAsync(o => o.KursId == id);
+            var kurs = await _context.Kurslar
+            .Include(k => k.KursKayitlari)
+            .ThenInclude(o => o.Ogrenci)
+            .FirstOrDefaultAsync(k => k.KursId == id);
             if (id != null && kurs != null)
             {
                 return View(kurs);
