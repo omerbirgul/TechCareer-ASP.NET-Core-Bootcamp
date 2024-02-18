@@ -12,9 +12,9 @@
     </div>
     <div class="mb-3">
         <label asp-for="KursId" class="from-label">Kurs</label>
-        <select asp-for="OgrenciId" type="text" asp-items = "ViewBag.Kurslar" class="form-control">
+        <select asp-for="KursId" type="text" asp-items = "ViewBag.Kurslar" class="form-control">
             <option value="">Seçiniz</option>
         </select>
     </div>
-    <button class="btn btn-primary">Kaydet</button>
+    <button class="btn btn-primary" type="submit">Kaydet</button>
 </form>
