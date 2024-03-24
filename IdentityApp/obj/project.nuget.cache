@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5uKtbuQS+Y7UMRrdn+6aHBI+ZcdEGPiVUiCdwfdx4RXyhN/s82+qPc0scWNJCXtTD3e5UXfqrSnT5pFI4UlU6Q==",
+  "dgSpecHash": "Mhnj+kfVm0ARdwyAhriA2nW9NxDBpAMXyjofwQNJOw3MHMvnA1/WsiOHuifiOeizLX8TiDMNs4b4qaLKBPU9TQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ömer\\OneDrive\\Masaüstü\\GİTHUB\\TechCareer-ASP.NET-Core-Bootcamp\\IdentityApp\\IdentityApp.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\ömer\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.0\\microsoft.entityframeworkcore.relational.8.0.0.nupkg.sha512",
     "C:\\Users\\ömer\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\8.0.0\\microsoft.entityframeworkcore.sqlite.8.0.0.nupkg.sha512",
     "C:\\Users\\ömer\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\8.0.0\\microsoft.entityframeworkcore.sqlite.core.8.0.0.nupkg.sha512",
+    "C:\\Users\\ömer\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.0\\microsoft.entityframeworkcore.tools.8.0.0.nupkg.sha512",
     "C:\\Users\\ömer\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\ömer\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
     "C:\\Users\\ömer\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

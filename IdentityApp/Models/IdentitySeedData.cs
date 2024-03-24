@@ -14,14 +14,16 @@ namespace IdentityApp.Models
 
         public static async void IdentityTestUser(IApplicationBuilder app)
         {
-            var context = app.ApplicationServices.CreateAsyncScope().ServiceProvider.GetRequiredService<IdentityContext>();
+            var context = app.ApplicationServices.CreateAsyncScope()
+                .ServiceProvider.GetRequiredService<IdentityContext>();
 
-            if(context.Database.GetPendingMigrations().Any())
+            if(context.Database.GetAppliedMigrations().Any())
             {
                 context.Database.Migrate();
             }
 
-            var userManager = app.ApplicationServices.CreateScope().ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+            var userManager = app.ApplicationServices.CreateScope()
+                .ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
             var user = await userManager.FindByNameAsync(adminUser);
 
